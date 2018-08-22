@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>字符串操作</h1>
+{#未加转义前&lt;em&gt;hello&lt;/em&gt;#}
+<p>禁用转义：{{ "<em>hello</em>" | safe}}</p>
+<p>首字母大写：{{ "hello" | capitalize}}</p>
+<p>小写：{{ "HELLO" | lower}}</p>
+<p>大写：{{ "hello" | upper}}</p>
+<p>每个单词首字母大写：{{ "hello python" | title}}</p>
+<p>翻转：{{ "hello" | reverse}}</p>
+<p>格式化：{{ "%s is %d" | format("ly",17)}}</p>
+<p>去掉标签：{{ "<b>hello</b>" | striptags}}</p>
+<p>截断：{{ "hello world python" | truncate(9)}}</p>
+
+<h1>列表操作[1,2,3,4,5,6]</h1>
+<p>取第一个值：{{ [1,2,3,4,5,6] | first }}</p>
+<p>取最后一个值：{{ [1,2,3,4,5,6] | last }}</p>
+<p>长度：{{ [1,2,3,4,5,6] | length }}</p>
+<p>求和：{{ [1,2,3,4,5,6] | sum }}</p>
+<p>排序：{{ [1,6,4,5,3,1,2] | sort }}</p>
+
+<h1>使用自定义过滤器my_filter</h1>
+<p>{{ [1,2,3,4,56] | li}}</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for item in my_list %}
+    {% if loop.index == 1 %}
+        <li style="background-color: red">{{ item.value }}</li>
+    {% elif loop.index ==2 %}
+        <li style="background-color: gold">{{ item.value }}</li>
+    {% elif loop.value == 3 %}
+        <li style="background-color: green">{{ item.value }}</li>
+    {% else %}
+        <li style="background-color: gray">{{ item.value }}</li>
+    {% endif %}
+{% endfor %}
+</body>
+</html>

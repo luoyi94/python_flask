@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>flask特有的变量和函数</h1>
+<p>config变量的使用{{ config.DEBUG }}</p>
+<p>request变量的使用{{ request.url }}</p>
+<p>g变量的使用{{ g.name }}</p>
+
+{% for msg in get_flashed_messages() %}
+<p>{{ msg }}</p>
+{% endfor %}
+
+
+</body>
+</html>

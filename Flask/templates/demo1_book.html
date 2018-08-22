@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+{{ form.csrf_token }}
+    {{ form.author_name.label }}：{{ form.author_name }}<br>
+    {{ form.book_name.label }}：{{ form.book_name }}<br>
+    {{ form.submit }}
+<h1>获取所有的作者和书</h1>
+{# 遍历所有的作者 #}
+{% for author in authors %}
+    <li>{{ author.name }}<a href="/delete_author/{{ author.id }}">删除</a></li>
+    <ul>
+        {# 通过作者取出对于的书#}
+        {% for book in author.books %}
+            <li>{{ book.name }}<a href="/delete_book/{{ book.id }}">删除</a></li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
+</form>
+</body>
+</html>
